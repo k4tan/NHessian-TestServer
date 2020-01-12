@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>TestHessianServlet</servlet-name>
+        <servlet-class>com.caucho.hessian.test.TestHessianServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestHessianServlet</servlet-name>
+        <url-pattern>/hessian/test</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>TestHessian2Servlet</servlet-name>
+        <servlet-class>com.caucho.hessian.test.TestHessian2Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestHessian2Servlet</servlet-name>
+        <url-pattern>/hessian/test2</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
